@@ -1,0 +1,22 @@
+body {
+    background-image: url(../images/dbs.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+}
+
+.container {
+    margin: auto;
+    text-align: center;
+    font-family: cursive;
+    font-size: 51px;
+    color: white;
+    font: bold;
+    font-style: oblique;
+}
+
+#currentWord {
+    word-spacing: 10px;
+}
