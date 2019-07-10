@@ -1,9 +1,9 @@
 body {
-    background-image: url(../images/dbs.jpg);
+    background-image: url(../Images/dbs.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    color: white;
+    color: black;
     display: flex;
 }
 
