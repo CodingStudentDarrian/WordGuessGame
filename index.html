@@ -4,17 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Guess Game</title>
-    <link rel="stylesheet" href="">
-
+    <title>WordGuess</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+<div class="Rules">
+    <h1> DB Super Guess Game</h1>
+    <h2>Rules</h2>
+    <p>Click on the letters below to guess the word.</p>
+    <p>You have ten attemps to guess each word.</p>
+    <p>Can't guess the word? Never fear the help button is here.</p>
+    <h3>Enjoy!</h3>
 
-<body>
-    <b><h2 style="color:blue">DBZ:Word Guess Game</h2></b>
-    <hr><br>
-
-
-    <script src="game.js"></script>
+</div>
+<div class="buttonBox">
+    <div id="buttons">
+    </div>
+    <div id="placeholder">
+    </div>
+    <p id="Remaining_Guesses"></p>
+    <p id="Help">Need Help? Press Below!</p>
+    <div class="container">
+        <button id="Need_Help">Get Help?</button>
+        <button id="restart">Replay</button>
+    </div>
+</div>
+<script src="assets/javaScript/game.js"></script>
 </body>
 
 </html>
