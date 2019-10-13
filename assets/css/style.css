@@ -1,4 +1,26 @@
 .Rules {
     text-align: center;
-    ;
+    color: black;
+    font-size: 20px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+dl {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#buttons {
+    text-align: center;
+}
+
+#my-word {
+    text-align: center;
+}
+
+.container {
+    text-align: center;
 }

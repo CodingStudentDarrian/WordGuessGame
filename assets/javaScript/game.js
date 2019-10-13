@@ -3,24 +3,24 @@ window.onload = function() {
     var wordsToGuess;
     var select;
     var word;
-    var guess;
+    var gues;
     var geusses = [];
     var geussesRemaining;
     var counter;
     var space;
 
 
-    var showgeussesRemaining = document.getElementById("Remaining_Guesses");
-    var getHelp = document.getElementById("Need_Help");
-    var showHelper = document.getElementById("Help");
+    const showgeussesRemaining = document.getElementById("Remaining_Guesses");
+    const getHelp = document.getElementById("Need_Help");
+    const showHelper = document.getElementById("Help");
 
-    var buttons = function() {
+    const buttons = function() {
         myButtons = document.getElementById('buttons');
-        letters = document.createElement('ul');
+        letters = document.createElement('dl');
 
         for (var i = 0; i < ABC.length; i++) {
             letters.id = 'ABC';
-            list = document.createElement('li');
+            list = document.createElement('dt');
             list.id = 'letter';
             list.innerHTML = ABC[i];
             check();
@@ -30,13 +30,13 @@ window.onload = function() {
     }
 
 
-    result = function() {
+    const result = function() {
         wordHolder = document.getElementById('placeholder');
-        correct = document.createElement('ul');
+        correct = document.createElement('dl');
 
         for (var i = 0; i < word.length; i++) {
             correct.setAttribute('id', 'my-word');
-            guess = document.createElement('li');
+            guess = document.createElement('dt');
             guess.setAttribute('class', 'guess');
             if (word[i] === "-") {
                 guess.innerHTML = "-";
@@ -51,7 +51,7 @@ window.onload = function() {
         }
     }
 
-    comments = function() {
+    const comments = function() {
         showgeussesRemaining.innerHTML = "You have " + geussesRemaining + " Remaining Guesses";
         if (geussesRemaining < 1) {
             showgeussesRemaining.innerHTML = "Try Again";
@@ -63,7 +63,7 @@ window.onload = function() {
         }
     }
 
-    check = function() {
+    const check = function() {
         list.onclick = function() {
             var geuss = (this.innerHTML);
             this.setAttribute("class", "active");
@@ -84,15 +84,15 @@ window.onload = function() {
         }
     }
 
-    var ABC = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+    const ABC = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
         'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
         't', 'u', 'v', 'w', 'x', 'y', 'z'
     ];
 
-    game = function() {
+    const game = function() {
         wordsToGuess = [
-            ["jiren", "goku", "gohan", "piccolo", "vegeta", "krillen", "Hit",
-                "android 17", "frieza"
+            ["jiren", "goku", "gohan", "piccolo", "vegeta", "krillen", "hit",
+                "beerus", "frieza", "toppo"
             ]
         ];
 
@@ -114,15 +114,15 @@ window.onload = function() {
 
     Need_Help.onclick = function() {
 
-        dbsClues = [
+        const dbsClues = [
             ["strongest pride trooper", "first to reach ultra-instinct", "son of goku",
-                "namekian z-fighter", "prince of sayians", "goku's best friend", "skill assasin",
-                "god of destruction for earth", "twin android (boy)", "capable of golden form"
+                "namekian z-fighter", "prince of sayians", "goku's best friend", "skilled assasin",
+                "god of destruction for earth", "capable of golden form", "captain of the pride troopers"
             ]
         ];
 
-        var wordIndex = wordsToGuess.indexOf(select);
-        var clueIndex = select.indexOf(word);
+        const wordIndex = wordsToGuess.indexOf(select);
+        const clueIndex = select.indexOf(word);
         showHelper.innerHTML = "Your Clue Is: " + dbsClues[wordIndex][clueIndex];
     };
     document.getElementById('restart').onclick = function() {
@@ -131,4 +131,4 @@ window.onload = function() {
         showHelper.innerHTML = "";
         game();
     }
-}
+};
