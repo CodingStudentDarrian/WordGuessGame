@@ -1,26 +1,34 @@
-.Rules {
-    text-align: center;
-    color: black;
-    font-size: 20px;
-}
-
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    text-align: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
 }
 
-dl {
-    cursor: pointer;
-    font-size: 15px;
+.Rules {
+    font-size: 26px;
 }
 
 #buttons {
-    text-align: center;
+    display: inline;
+    cursor: pointer;
 }
 
-#my-word {
-    text-align: center;
+#abc li {
+    display: inline;
+    font-size: 40px;
+}
+
+.guess {
+    display: inline;
+    font-size: 40px;
 }
 
 .container {
-    text-align: center;
+    font-size: 30px;
+}
+
+button {
+    font-size: 20px;
 }

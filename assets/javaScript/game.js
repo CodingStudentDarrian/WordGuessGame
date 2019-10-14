@@ -16,11 +16,10 @@ window.onload = function() {
 
     const buttons = function() {
         myButtons = document.getElementById('buttons');
-        letters = document.createElement('dl');
-
+        letters = document.createElement('ul');
         for (var i = 0; i < ABC.length; i++) {
-            letters.id = 'ABC';
-            list = document.createElement('dt');
+            letters.id = 'abc';
+            list = document.createElement('li');
             list.id = 'letter';
             list.innerHTML = ABC[i];
             check();
@@ -32,17 +31,16 @@ window.onload = function() {
 
     const result = function() {
         wordHolder = document.getElementById('placeholder');
-        correct = document.createElement('dl');
-
+        correct = document.createElement('ul');
         for (var i = 0; i < word.length; i++) {
             correct.setAttribute('id', 'my-word');
-            guess = document.createElement('dt');
+            guess = document.createElement('li');
             guess.setAttribute('class', 'guess');
             if (word[i] === "-") {
-                guess.innerHTML = "-";
+                guess.innerHTML = "-" + " ";
                 space = 1;
             } else {
-                guess.innerHTML = "_";
+                guess.innerHTML = "_" + " ";
             }
 
             geusses.push(guess);
@@ -84,9 +82,9 @@ window.onload = function() {
         }
     }
 
-    const ABC = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-        'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-        't', 'u', 'v', 'w', 'x', 'y', 'z'
+    const ABC = ['a', " ", 'b', " ", 'c', " ", 'd', " ", 'e', " ", 'f', " ", 'g', " ", 'h',
+        " ", 'i', " ", 'j', " ", 'k', " ", 'l', " ", 'm', " ", 'n', " ", 'o', " ", 'p', " ", 'q', " ", 'r', " ", 's',
+        " ", 't', " ", 'u', " ", 'v', " ", 'w', " ", 'x', " ", 'y', " ", 'z'
     ];
 
     const game = function() {
