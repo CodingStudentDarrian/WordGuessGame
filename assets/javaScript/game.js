@@ -3,7 +3,6 @@ window.onload = function() {
     var wordsToGuess;
     var select;
     var word;
-    var gues;
     var geusses = [];
     var geussesRemaining;
     var counter;
